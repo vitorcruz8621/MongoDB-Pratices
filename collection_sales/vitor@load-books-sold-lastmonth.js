@@ -43,6 +43,8 @@ db.runCommand({
                         "$month": {
                             /*
                             lógica de "3-" e "4-", mas sem sucesso aqui
+                            tentar fazer algo proximo de...
+                            db.sales.find({ "items.soldAt" : { "$gte" : ISODate("2017-10-01T00:00:01Z"), "$lt" : ISODate("2017-10-31T00:00:00Z") }})
                             */
                             "$items.soldAt" : {
                                 $gt: ISODate("2017-10-01T00:00:01.000Z"),
